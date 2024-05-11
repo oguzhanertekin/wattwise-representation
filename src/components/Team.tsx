@@ -44,7 +44,7 @@ const teamList: TeamProps[] = [
   },
   {
     imageUrl: berkay,
-    name: "Beraky Barular",
+    name: "Berkay Barulay",
     position: "Team Member",
     socialNetworks: [
       {
