@@ -30,7 +30,7 @@ export const Hero = () => {
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
           <Button className="w-full md:w-1/3 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500">
-            Contact Us
+            <a href="mailto:calganaygun@gmail.com">Contact Us</a>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="22"
