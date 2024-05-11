@@ -29,7 +29,7 @@ const teamList: TeamProps[] = [
   {
     imageUrl: calgan,
     name: "Çalgan Muharrem Aygün",
-    position: "Team Lead / Developer",
+    position: "Team Member",
     socialNetworks: [
       { name: "Linkedin", url: "https://www.linkedin.com/in/calganaygun/" },
     ],
@@ -37,7 +37,7 @@ const teamList: TeamProps[] = [
   {
     imageUrl: karaca,
     name: "Ahmet Karaca",
-    position: "Backend Developer",
+    position: "Team Member",
     socialNetworks: [
       { name: "Linkedin", url: "https://www.linkedin.com/in/ahmet--karaca/" },
     ],
@@ -45,7 +45,7 @@ const teamList: TeamProps[] = [
   {
     imageUrl: berkay,
     name: "Beraky Barular",
-    position: "Frontend Developer",
+    position: "Team Member",
     socialNetworks: [
       {
         name: "Linkedin",
@@ -56,7 +56,7 @@ const teamList: TeamProps[] = [
   {
     imageUrl: ouz,
     name: "Oğuzhan Ertekin",
-    position: "Frontend Developer",
+    position: "Team Member",
     socialNetworks: [
       {
         name: "Linkedin",
