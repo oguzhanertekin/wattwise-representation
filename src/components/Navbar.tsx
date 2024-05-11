@@ -16,7 +16,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
-import { LogoIcon } from "./Icons";
+import { useTheme } from "@/components/theme-provider";
 
 interface RouteProps {
   href: string;
@@ -25,25 +25,33 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
+    href: "#summary",
+    label: "Summary",
+  },
+  {
+    href: "#howitworks",
+    label: "How It Works?",
+  },
+  {
+    href: "#impacts",
+    label: "Impacts",
+  },
+  {
     href: "#features",
     label: "Features",
   },
   {
-    href: "#testimonials",
-    label: "Testimonials",
-  },
-  {
-    href: "#pricing",
-    label: "Pricing",
-  },
-  {
-    href: "#faq",
-    label: "FAQ",
+    href: "#team",
+    label: "Team",
   },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const { theme, setTheme } = useTheme();
+  const isDarkMode = theme === "dark";
+
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
@@ -54,8 +62,12 @@ export const Navbar = () => {
               href="/"
               className="ml-2 font-bold text-xl flex"
             >
-              <LogoIcon />
-              ShadcnUI/React
+              {" "}
+              {isDarkMode ? (
+                <img src="/ww2-white.png" alt="Logo" className="h-9 mr-2" />
+              ) : (
+                <img src="/ww2-black.png" alt="Logo" className="h-9 mr-2" />
+              )}
             </a>
           </NavigationMenuItem>
 
@@ -63,10 +75,7 @@ export const Navbar = () => {
           <span className="flex md:hidden">
             <ModeToggle />
 
-            <Sheet
-              open={isOpen}
-              onOpenChange={setIsOpen}
-            >
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger className="px-2">
                 <Menu
                   className="flex md:hidden h-5 w-5"
@@ -127,7 +136,7 @@ export const Navbar = () => {
           </nav>
 
           <div className="hidden md:flex gap-2">
-            <a
+            {/* <a
               rel="noreferrer noopener"
               href="https://github.com/leoMirandaa/shadcn-landing-page.git"
               target="_blank"
@@ -135,7 +144,7 @@ export const Navbar = () => {
             >
               <GitHubLogoIcon className="mr-2 w-5 h-5" />
               Github
-            </a>
+            </a> */}
 
             <ModeToggle />
           </div>

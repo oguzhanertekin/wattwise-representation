@@ -8,6 +8,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
+import calgan from "../assets/calgan.webp";
+import karaca from "../assets/karaca.jpeg";
+import berkay from "../assets/berkay.jpeg";
+import ouz from "../assets/ouz.jpg";
 
 interface TeamProps {
   imageUrl: string;
@@ -23,59 +27,40 @@ interface SociaNetworkslProps {
 
 const teamList: TeamProps[] = [
   {
-    imageUrl: "https://i.pravatar.cc/150?img=35",
-    name: "Emma Smith",
-    position: "Product Manager",
+    imageUrl: calgan,
+    name: "Çalgan Muharrem Aygün",
+    position: "Team Lead / Developer",
     socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
-      },
+      { name: "Linkedin", url: "https://www.linkedin.com/in/calganaygun/" },
     ],
   },
   {
-    imageUrl: "https://i.pravatar.cc/150?img=60",
-    name: "John Doe",
-    position: "Tech Lead",
-    socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
-      },
-    ],
-  },
-  {
-    imageUrl: "https://i.pravatar.cc/150?img=36",
-    name: "Ashley Ross",
-    position: "Frontend Developer",
-    socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
-
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
-      },
-    ],
-  },
-  {
-    imageUrl: "https://i.pravatar.cc/150?img=17",
-    name: "Bruce Rogers",
+    imageUrl: karaca,
+    name: "Ahmet Karaca",
     position: "Backend Developer",
     socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
+      { name: "Linkedin", url: "https://www.linkedin.com/in/ahmet--karaca/" },
+    ],
+  },
+  {
+    imageUrl: berkay,
+    name: "Beraky Barular",
+    position: "Frontend Developer",
+    socialNetworks: [
       {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
+        name: "Linkedin",
+        url: "https://www.linkedin.com/in/berkay-barulay-6517441b4/",
+      },
+    ],
+  },
+  {
+    imageUrl: ouz,
+    name: "Oğuzhan Ertekin",
+    position: "Frontend Developer",
+    socialNetworks: [
+      {
+        name: "Linkedin",
+        url: "https://www.linkedin.com/in/o%C4%9Fuzhan-ertekin/",
       },
     ],
   },
@@ -96,23 +81,15 @@ export const Team = () => {
   };
 
   return (
-    <section
-      id="team"
-      className="container py-24 sm:py-32"
-    >
+    <section id="team" className="container py-24 sm:py-32">
       <h2 className="text-3xl md:text-4xl font-bold">
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Our Dedicated{" "}
+        Our{" "}
+        <span className="bg-[#C0F603] from-primary/60 to-primary text-transparent bg-clip-text">
+          Team
         </span>
-        Crew
       </h2>
 
-      <p className="mt-4 mb-10 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
-      </p>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10">
+      <div className="grid mt-14 md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10">
         {teamList.map(
           ({ imageUrl, name, position, socialNetworks }: TeamProps) => (
             <Card
@@ -132,7 +109,7 @@ export const Team = () => {
               </CardHeader>
 
               <CardContent className="text-center pb-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>WattWise</p>
               </CardContent>
 
               <CardFooter>
