@@ -66,7 +66,7 @@ export const Impacts = () => {
           </div>
         </div>
 
-        <div className="w-[450px] h-[100%]">
+        <div className="w-[450px] h-[100%] hidden md:block">
           <img
             src={power}
             className="w-[200px] md:w-[900px] lg:w-[600px] object-contain"
